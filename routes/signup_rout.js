@@ -1,7 +1,7 @@
 const express = require('express');
 const path = require('path');
 const client = require('../dbconnection');
-const login_details = client.db('Demo').collection('Login');
+const login_details = client.db('global').collection('registration');
 
 const router = express.Router();
 
