@@ -14,36 +14,39 @@ body{
 }
 
 .wrapper{
+    /* Positions the box relative to its original position(entire screen) */
     position: relative;
     width: 645px;
     height: 400px;
     background: transparent;
-    border: 2px solid rgb(60 191 251);
-    box-shadow:0 0 24px rgb(60 191 251) ;
-    overflow: hidden;
+    border: 2px solid rgb(60 191 251);/*Sets border width,style,color*/
+    box-shadow:0 0 24px rgb(60 191 251) ;/*offset-x offset-y blur-radius color*/
+    /* offset-x:Horizontal offset of shadow.A +ve value puts the shadow on right side of box,-ve value on left side. 
+    offset-y:Vertical offset of shadow.A +ve value puts the shadow below the box,-ve value puts the shadow above the box.*/
+    overflow: hidden;/*The overflow content is invisible/hidden*/
 }
 
 .wrapper .form-box {
-    position: absolute;
+    position: absolute;/*Postitions the element relative to its first parent*/
     top: 0;
     width: 50%;
     height: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+    display: flex; /*Displays an element as a block-level flex container*/
+    flex-direction: column;/*Specifies the direction of flexible items.It arranges flexible items vertically.*/
+    justify-content: center;/*Aligns the flexible container's items horizontally.Items are positioned at the center of the container.*/
 }
 
 .wrapper .form-box.login{
     left: 0;
-    padding: 0 68px 0  40px;
+    padding: 0 68px 0  40px;/*space betwen its border and its content*//*top right bottom left*/
 }
 
 .wrapper .form-box.login .animation{
-    transform: translateX(0);
-    opacity: 1;
-    filter: blur(0);
-    transition: .8s ease;
-    transition-delay: calc(.1s * var(--j));
+    transform: translateX(0);/*Applies 2D transformation to an element*//*tanslate(X)-defines a translation using only the value for X-axis*/
+    opacity: 1;/*sets the transparency level for an element. 1->not transparent at all, 0.5->50% see-through, 0->completely transparent*/
+    filter: blur(0);/*Defines visual effect to an element.blur->Apply blur effect to an image.*/
+    transition: .8s ease;/*transition-duration(how many seconds or milliseconds the transition effect to complete) transition-timing-function(specifies speed curve of transition effect) transition-delay(when the transition effect will start)*/
+    transition-delay: calc(.1s * var(--j));/*Delay is calculated based on the value of custom CSS Variable.It is calculated as 0.1sec(trasnsition-duration) multiplied by the value of '--j'.This allows for dynamicc adjustment of transition timing based on the value of '--j'*/
 }
 
 .wrapper.active  .form-box.login .animation{
@@ -56,11 +59,11 @@ body{
 .wrapper .form-box.register{
     right: 0;
     padding: 0 40px 0  68px;
-    pointer-events: none;
+    pointer-events: none;/*Defines whether or not an element reacts to pointer events*//*none->the element does not react to pointer events*/
 }
 
 .wrapper.active .form-box.register{
-    pointer-events: auto;
+    pointer-events: auto;/*auto-> element reacts to pointer events like :hover and click*/
 }
 
 .wrapper .form-box.register .animation{
@@ -80,14 +83,14 @@ body{
 .form-box h2{
     font-size: 24px;
     color: white;
-    text-align: center;
+    text-align: center;/*Specifies the horizontal alignment of text in an element*/
 }
 
 .form-box .input-box{
     position: relative;
     width: 100%;
     height: 45px;
-    margin: 24px 0;
+    margin: 24px 0;/*space between border and element adjacent to it*//*top right bottom left*//*top right*/
 }
 
 .input-box input{
