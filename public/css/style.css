@@ -19,11 +19,11 @@ body{
     width: 645px;
     height: 400px;
     background: transparent;
-    border: 2px solid rgb(60 191 251);/Sets border width,style,color/
-    box-shadow:0 0 24px rgb(60 191 251) ;/offset-x offset-y blur-radius color/
+    border: 2px solid rgb(60 191 251);/*Sets border width,style,color*/
+    box-shadow:0 0 24px rgb(60 191 251) ;/*offset-x offset-y blur-radius color*/
     /* offset-x:Horizontal offset of shadow.A +ve value puts the shadow on right side of box,-ve value on left side. 
     offset-y:Vertical offset of shadow.A +ve value puts the shadow below the box,-ve value puts the shadow above the box.*/
-    overflow: hidden;/The overflow content is invisible/hidden/
+    overflow: hidden;/*The overflow content is invisible/hidden*/
 }
 
 .wrapper .form-box {
@@ -36,7 +36,7 @@ body{
     justify-content: center;/*Aligns the flexible container's items horizontally.Items are positioned at the center of the container.*/
 }
 
-.wrapper .form-box.login{*
+.wrapper .form-box.login{
     left: 0;
     padding: 0 68px 0  40px;/*space betwen its border and its content*//*top right bottom left*/
 }
@@ -45,15 +45,15 @@ body{
     transform: translateX(0);/*Applies 2D transformation to an element*//*tanslate(X)-defines a translation using only the value for X-axis*/
     opacity: 1;/*sets the transparency level for an element. 1->not transparent at all, 0.5->50% see-through, 0->completely transparent*/
     filter: blur(0);/*Defines visual effect to an element.blur->Apply blur effect to an image.*/
-    transition: .8s ease;/*transition-duration(how many seconds or milliseconds the transition effect to complete) transition-timing-function(specifies speed curve of transition effect) transition-delay(when the transition effect will start)/
-    transition-delay: calc(.1s * var(--j));/Delay is calculated based on the value of custom CSS Variable.It is calculated as 0.1sec(trasnsition-duration) multiplied by the value of '--j'.This allows for dynamicc adjustment of transition timing based on the value of '--j'*/
+    transition: .8s ease;/*transition-duration(how many seconds or milliseconds the transition effect to complete) transition-timing-function(specifies speed curve of transition effect) transition-delay(when the transition effect will start)*/
+    transition-delay: calc(.1s * var(--j));/*Delay is calculated based on the value of custom CSS Variable.It is calculated as 0.1sec(trasnsition-duration) multiplied by the value of '--j'.This allows for dynamicc adjustment of transition timing based on the value of '--j'*/
 }
 
 .wrapper.active  .form-box.login .animation{
     transform: translateX(-120%);
     opacity: 0;
     filter: blur(10px);
-    transition-delay: calc(.1s * var(--i));/**/
+    transition-delay: calc(.1s * var(--i));
 }
 
 .wrapper .form-box.register{
@@ -90,7 +90,7 @@ body{
     position: relative;
     width: 100%;
     height: 45px;
-    margin: 24px 0;/*space between border and element adjacent to it//top right bottom left*//*top right*/
+    margin: 24px 0;/*space between border and element adjacent to it*//*top right bottom left*//*top right*/
 }
 
 .input-box input{
